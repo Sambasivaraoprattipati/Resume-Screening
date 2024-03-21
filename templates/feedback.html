@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-container {
+  flex-grow: 1;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+.buttons {
+    position: absolute;
+    top: 7%; /* Adjust the top position as needed */
+    transform: translateY(-50%);
+    right: 20px;
+  }
+  
+  .buttons a {
+    padding: 8px 16px;
+    border: 2px solid #fff;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .buttons a:hover {
+    background-color: #2980b9;
+  }
+
+
+/* Main styles */
+main {
+  padding: 40px 0;
+}
+
+.section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+</style>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="title-container">
+        <h1>Feedback</h1>
+      </div>
+      <div class="buttons">
+        <a href="/">Home</a>
+    </div>
+    
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <h2>We'd Love to Hear Your Feedback</h2>
+      <p>Thank you for using our resume screening test. Your feedback helps us improve our service. Please take a moment to let us know how we can enhance your experience.</p>
+      <form action="submit_feedback.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
